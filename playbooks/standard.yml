@@ -5,4 +5,4 @@
   roles:
     - { role: php5, php_type: apache2 }
     - { role: apache_modphp }
-    - { role: drush, drush_extensions: [coder, registry_rebuild] }
+    - { role: drush, drush_extensions: [registry_rebuild] }
