@@ -5,8 +5,11 @@
 
 - name: Install composer
   shell: curl -sS https://getcomposer.org/installer | php
+  args:
+    chdir: /tmp
+    creates: /usr/local/bin/composer
   sudo: no
 
 - name: Move composer
-  shell: mv composer.phar /usr/local/bin/composer creates=/usr/local/bin/composer
+  shell: mv /tmp/composer.phar /usr/local/bin/composer creates=/usr/local/bin/composer
   sudo: yes
