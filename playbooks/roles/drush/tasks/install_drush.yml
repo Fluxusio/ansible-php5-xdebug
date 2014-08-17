@@ -12,6 +12,8 @@
 
 - name: Install drush via composer
   command: composer global require drush/drush:6.* --working-dir=/opt/drush
+  args:
+    creates: /opt/drush/vendor/bin/drush
   sudo: yes
 
 - name: Create drush symlink
