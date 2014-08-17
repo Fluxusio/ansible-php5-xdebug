@@ -2,6 +2,8 @@
 
 - name: Install extensions
   shell: drush dl {{ item }}
+  args:
+    creates: "{{ ansible_env.HOME }}/.drush/{{item}}"
   with_items:
     drush_extensions
   when: drush_extensions is defined
