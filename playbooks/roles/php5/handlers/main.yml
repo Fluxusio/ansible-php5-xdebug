@@ -4,3 +4,4 @@
   # TODO: And HHVM?
   service: name="{{ 'php5-fpm' if (php_type == 'fpm') else 'apache2' }}" state=restarted
   sudo: yes
+  when: php_type is defined

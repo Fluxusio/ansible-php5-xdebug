@@ -25,14 +25,13 @@
   notify:
   - restart php5-server
   sudo: yes
+  when: php_type is defined
 
 - name: Set PHP memory limit (CLI)
   ini_file: dest=/etc/php5/cli/php.ini
             section=PHP
             option=memory_limit
             value={{ php_memory_limit | default('256M') }}
-  notify:
-  - restart php5-server
   sudo: yes
 
 - name: Display errors in non-production environments
@@ -44,6 +43,7 @@
   notify:
   - restart php5-server
   sudo: yes
+  when: php_type is defined
 
 - name: Set max post size
   ini_file: dest="/etc/php5/{{ php_type | default('fpm') }}/php.ini"
@@ -57,3 +57,4 @@
   notify:
   - restart php5-server
   sudo: yes
+  when: php_type is defined
