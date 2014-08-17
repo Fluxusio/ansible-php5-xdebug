@@ -1,0 +1,12 @@
+---
+
+- name: Install Node
+  apt: name={{ item }} state=present install_recommends=no update_cache=yes cache_valid_time=3600
+  with_items:
+    - nodejs
+    - npm
+  sudo: yes
+
+- name: Create Node symlink
+  shell: ln -s $(which nodejs) /usr/local/bin/node
+  sudo: yes

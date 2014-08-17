@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+PLAYBOOKS_PATH = "../ansible/playbooks"
+ROLES_PATH = "../ansible/playbooks/roles"
+
+site "https://galaxy.ansible.com/api/v1"
+
+role "ICTO.ansible-jenkins", github: "ICTO/ansible-jenkins", ref: 'development'

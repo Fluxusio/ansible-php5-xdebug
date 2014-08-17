@@ -1,0 +1,17 @@
+---
+
+- name: Create behat install directory
+  file: path=/opt/behat owner=root group=root state=directory
+  sudo: yes
+
+- name: Create composer file for behat installation
+  template: src=composer.json.j2 dest=/opt/behat/composer.json
+  sudo: yes
+
+- name: Install behat via composer
+  shell: composer install --prefer-dist --working-dir=/opt/behat
+  sudo: yes
+
+- name: Create behat symlink
+  file: src=/opt/behat/bin/behat dest=/usr/local/bin/behat state=link
+  sudo: yes

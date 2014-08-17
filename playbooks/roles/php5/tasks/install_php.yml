@@ -1,0 +1,59 @@
+---
+
+- name: Install PHP
+  apt: name={{ item }} state=present install_recommends=no update_cache=yes cache_valid_time=3600
+  with_items:
+    - php5
+    - php5-memcached
+    - php5-mysqlnd
+    - php5-mcrypt
+    - php5-gd
+    - php5-json
+    - php5-curl
+  sudo: yes
+
+- name: Install php-fpm
+  apt: name=php5-fpm state=present install_recommends=no
+  when: (php_type is not defined) or (php_type == 'fpm')
+  sudo: yes
+
+- name: Set PHP memory limit (server)
+  ini_file: dest="/etc/php5/{{ php_type | default('fpm') }}/php.ini"
+            section=PHP
+            option=memory_limit
+            value={{ php_memory_limit | default('256M') }}
+  notify:
+  - restart php5-server
+  sudo: yes
+
+- name: Set PHP memory limit (CLI)
+  ini_file: dest=/etc/php5/cli/php.ini
+            section=PHP
+            option=memory_limit
+            value={{ php_memory_limit | default('256M') }}
+  notify:
+  - restart php5-server
+  sudo: yes
+
+- name: Display errors in non-production environments
+  ini_file: dest="/etc/php5/{{ php_type | default('fpm') }}/php.ini"
+            section=PHP
+            option=display_errors
+            value=On
+  when: env is not defined or (env is defined and env != "production")
+  notify:
+  - restart php5-server
+  sudo: yes
+
+- name: Set max post size
+  ini_file: dest="/etc/php5/{{ php_type | default('fpm') }}/php.ini"
+            section=PHP
+            option=upload_max_filesize
+            value={{ php_post_max_size | default('8M') }}
+  ini_file: dest="/etc/php5/{{ php_type | default('fpm') }}/php.ini"
+            section=PHP
+            option=post_max_size
+            value={{ php_post_max_size | default('8M') }}
+  notify:
+  - restart php5-server
+  sudo: yes

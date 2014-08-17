@@ -1,0 +1,4 @@
+---
+
+- include: install_behat.yml
+- include: install_zombiejs.yml

@@ -1,0 +1,13 @@
+---
+
+# This is really only tolerable because the test-runner is not a prod box
+- name: Install pre-reqs for building ZombieJS
+  apt: name={{ item }} state=present install_recommends=no update_cache=yes
+  with_items:
+    - make
+    - g++
+  sudo: yes
+
+- name: Install ZombieJS
+  shell: npm install -g zombie
+  sudo: yes

@@ -1,0 +1,7 @@
+---
+
+- name: Install extensions
+  shell: drush dl {{ item }}
+  with_items:
+    drush_extensions
+  when: drush_extensions is defined

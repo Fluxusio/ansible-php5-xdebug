@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  
+  roles:
+    - { role: test_runner }
+    - { role: apache_modphp }
+    - { role: php5, php_type: apache2 }
+    - { role: drush }
+    - { role: mysql }
+
+
+

@@ -1,0 +1,12 @@
+---
+- name: Install curl
+  apt: name=curl state=present install_recommends=no update_cache=yes
+  sudo: yes
+
+- name: Install composer
+  shell: curl -sS https://getcomposer.org/installer | php
+  sudo: no
+
+- name: Move composer
+  shell: mv composer.phar /usr/local/bin/composer creates=/usr/local/bin/composer
+  sudo: yes
