@@ -1,6 +1,6 @@
 ---
 - name: Install curl
-  apt: name=curl state=present install_recommends=no update_cache=yes
+  apt: name=curl state=present install_recommends=no update_cache=yes cache_valid_time=3600
   sudo: yes
 
 - name: Install composer
