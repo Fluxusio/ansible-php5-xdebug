@@ -9,4 +9,7 @@
 
 - name: Create Node symlink
   shell: ln -s $(which nodejs) /usr/local/bin/node
+  args:
+    creates: /usr/local/bin/node
   sudo: yes
+
