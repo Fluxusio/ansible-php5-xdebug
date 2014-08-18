@@ -1,0 +1,12 @@
+<VirtualHost {{ item.interfaces|default('*') }}:{{ item.port|default('80') }}>
+    ServerName {{ item.vhost }}
+
+    DocumentRoot {{ item.docroot }}
+    <Directory {{ item.docroot }}>
+        Options -Indexes +FollowSymLinks +MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from all
+        Require all granted
+    </Directory>
+</VirtualHost>

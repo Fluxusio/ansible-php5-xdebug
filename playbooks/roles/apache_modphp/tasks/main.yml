@@ -2,3 +2,4 @@
 
 - include: install_apache.yml
 - include: config.yml
+- include: vhost.yml

@@ -1,0 +1,16 @@
+---
+
+- name: Add virtual hosts
+  template: 
+    src=vhost.j2 
+    dest="/etc/apache2/sites-available/{{ item.vhost }}.conf"
+  sudo: yes
+  with_items: vhosts
+
+- name: Activate virtual hosts
+  command: "/usr/sbin/a2ensite {{ item.vhost }} creates=/etc/apache2/sites-enabled/{{ item.vhost }}"
+  sudo: yes
+  with_items: vhosts
+  notify:
+    - reload apache
+  
