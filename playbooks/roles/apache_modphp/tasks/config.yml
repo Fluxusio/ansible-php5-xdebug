@@ -4,5 +4,5 @@
   command: /usr/sbin/a2dissite 000-default.conf removes=/etc/apache2/sites-enabled/000-default.conf
   sudo: yes
   notify:
-    - restart apache
+    - reload apache
   
