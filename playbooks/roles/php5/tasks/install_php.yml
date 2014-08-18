@@ -13,8 +13,8 @@
   sudo: yes
 
 - name: Install php-fpm
-  apt: name=php5-fpm state=present install_recommends=no
-  when: (php_type is not defined) or (php_type == 'fpm')
+  apt: name=php5-fpm state=present install_recommends=no update_cache=yes cache_valid_time=3600
+  when: php_type is defined and php_type == 'fpm'
   sudo: yes
 
 - name: Set PHP memory limit (server)
