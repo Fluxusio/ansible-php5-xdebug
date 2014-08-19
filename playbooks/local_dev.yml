@@ -6,6 +6,6 @@
     - { role: php5, php_type: apache2 }
     - { role: apache_modphp,
         vhosts: [{ vhost: "default", docroot: "/vagrant/docroot" }]}
-    - { role: drush, drush_extensions: [coder, registry_rebuild] }
+    - { role: drush, drush_extensions: [registry_rebuild] }
     - { role: test_runner }
     - { role: mysql }
