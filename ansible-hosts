@@ -2,7 +2,7 @@
 cms-service01-az1.development.tescloud.com
 
 [test-runner]
-jenkins-cms.development.tescloud.com
+jenkins-cms.management.tescloud.com
 
 [staging]
 cms-service01-az1.staging.tescloud.com
