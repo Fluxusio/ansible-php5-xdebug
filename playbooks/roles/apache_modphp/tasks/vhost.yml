@@ -14,3 +14,6 @@
   notify:
     - reload apache
   
+- name: Create virtual host directory
+  file: path={{ item.docroot}} state=directory
+  when: create_dir is defined and create_dir
