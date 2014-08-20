@@ -1,0 +1,3 @@
+---
+- include: install_memcached.yml
+- include: config.yml

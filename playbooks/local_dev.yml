@@ -3,6 +3,7 @@
 - hosts: all
   
   roles:
+    - { role: memcached }
     - { role: mysql }
     - { role: php5, php_type: apache2 }
     - { role: apache_modphp,

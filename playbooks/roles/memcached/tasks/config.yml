@@ -1,0 +1,6 @@
+---
+- name: Configure memcached
+  template: src=memcached.conf.j2 dest=/etc/memcached.conf
+  sudo: yes
+  notify:
+    - restart memcached

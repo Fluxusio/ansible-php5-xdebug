@@ -7,3 +7,4 @@
     - { role: apache_modphp,
         vhosts: [{ vhost: "default", docroot: "/var/www/drupal/docroot" }]}
     - { role: drush, drush_extensions: [registry_rebuild] }
+    - { role: memcached }
