@@ -20,7 +20,7 @@
   sudo: yes
 
 - name: Set MySQL root password
-  mysql_user: name=root password={{ mysql_root_password }} host=localhost
+  mysql_user: name=root password={{ mysql_root_password }} host=localhost login_user=root login_password={{ mysql_root_password }} check_implicit_admin=true
 
 - name: Remove MySQL test database
   mysql_db: db=test state=absent login_user=root login_password={{ mysql_root_password }}
