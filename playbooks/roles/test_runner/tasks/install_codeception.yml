@@ -1,0 +1,13 @@
+---
+
+- name: Create install directory
+  file: path=/opt/codeception owner=root group=root state=directory
+  sudo: yes
+
+- name: Download codeception
+  get_url: url=http://codeception.com/releases/2.0.4/codecept.phar dest=/opt/codeception mode=0755
+
+
+- name: Create symlink
+  file: src=/opt/codeception/codecept.phar dest=/usr/local/bin/codecept state=link
+  sudo: yes

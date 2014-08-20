@@ -2,3 +2,4 @@
 
 - include: install_behat.yml
 - include: install_zombiejs.yml
+- include: install_codeception.yml
