@@ -30,4 +30,5 @@
 
 - name: Install Drupal
   shell: drush si --root={{ drupal_docroot }} --uri={{ drupal_uri }} --account-pass={{ drupal_admin_pass }} --y --db-url={{ drupal_db_url }} --db-su={{ drupal_db_su}} --db-su-pw={{ drupal_db_su_pw}} {{ drupal_install_profile }}
+  sudo_user: www-data
 
