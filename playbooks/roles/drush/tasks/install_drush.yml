@@ -19,3 +19,7 @@
 - name: Create drush symlink
   file: src=/opt/drush/vendor/bin/drush dest=/usr/local/bin/drush state=link
   sudo: yes
+
+- name: Install MySQL client (needed for drush sqlc)
+  apt: name=mysql-client state=present install_recommends=no update_cache=yes cache_valid_time=3600
+  sudo: yes
