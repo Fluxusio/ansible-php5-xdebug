@@ -14,7 +14,7 @@
   sudo: yes
 
 - name: Set files permissions
-  file: path={{ drupal_docroot }}/sites/default/files state=directory owner={{ apache_user | default('www-data') }} group={{ apache_user | default('www-data') }}
+  file: path={{ drupal_docroot }}/sites/default/files state=directory owner={{ apache_user | default('www-data') }} group={{ apache_user | default('www-data') }} recurse=yes
   sudo: yes
 
 - name: Install Drupal
