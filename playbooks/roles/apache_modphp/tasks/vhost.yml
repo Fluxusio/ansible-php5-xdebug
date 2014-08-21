@@ -15,6 +15,7 @@
     - reload apache
   
 - name: Create virtual host directory
-  file: path={{ item.docroot}} state=directory
+  file: path={{ item.docroot }} state=directory
   when: item.create_dir is defined and item.create_dir
+  with_items: vhosts
   sudo: yes
