@@ -1,4 +1,8 @@
 ---
+- name: Install unzip
+  apt: name=unzip state=present install_recommends=no update_cache=yes cache_valid_time=3600
+  sudo: yes
+
 - name: Copy Drupal archive
   unarchive:
     src={{ drupal_archive_path}}
