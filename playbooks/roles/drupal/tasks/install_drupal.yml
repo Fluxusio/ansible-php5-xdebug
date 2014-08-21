@@ -3,6 +3,12 @@
   apt: name=unzip state=present install_recommends=no update_cache=yes cache_valid_time=3600
   sudo: yes
 
+- name: Create temporary unzip location
+  file: path=/tmp/drupal-latest state=directory
+
+- name: Empty temporary unzip location
+  shell: rm -rf /tmp/drupal-latest/*
+
 - name: Copy Drupal archive
   unarchive:
     src={{ drupal_archive_path}}
