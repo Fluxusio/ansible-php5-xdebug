@@ -8,6 +8,7 @@
 
 - name: Empty temporary unzip location
   shell: rm -rf /tmp/drupal-latest/*
+  sudo: yes
 
 - name: Copy Drupal archive
   unarchive:

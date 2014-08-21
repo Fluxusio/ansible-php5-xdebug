@@ -17,3 +17,4 @@
 - name: Create virtual host directory
   file: path={{ item.docroot}} state=directory
   when: item.create_dir is defined and item.create_dir
+  sudo: yes
