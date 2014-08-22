@@ -5,4 +5,22 @@
   sudo: yes
   notify:
     - reload apache
+
   
+- name: Set basic Apache config
+  template: src=apache2.conf.j2 dest=/etc/apache2/apache2.conf
+  sudo: yes
+  notify:
+    - reload apache
+
+- name: Setting Apache Prefork MPM
+  lineinfile: 
+    dest=/etc/apache2/mods-available/mpm_prefork.conf
+    regexp="{{ item.key }}"
+    line="{{ item.value }}"
+  with_items:
+    - { key: "StartServers", value: "StartServers {{ StartServers }}" }
+    - { key: "MinSpareServers", value: "MinSpareServers {{ MinSpareServers }}" }
+    - { key: "MaxSpareServers", value: "MaxSpareServers {{ MaxSpareServers }}" }
+    - { key: "MaxRequestWorkers", value: "MaxRequestWorkers {{ MaxRequestWorkers }}" }
+    - { key: "MaxConnectionsPerChild", value: "MaxConnectionsPerChild {{ MaxConnectionsPerChild }}" }

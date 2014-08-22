@@ -2,4 +2,10 @@
 
 - include: install_apache.yml
 - include: config.yml
+  vars:
+    StartServers: 4
+    MinSpareServers: 4
+    MaxSpareServers: 6
+    MaxRequestWorkers: 20
+    MaxConnectionsPerChild: 1000
 - include: vhost.yml
