@@ -12,7 +12,7 @@
 
 - name: Copy Drupal archive
   unarchive:
-    src={{ drupal_archive_path}}
+    src={{ drupal_archive_path }}
     dest=/tmp/drupal-latest
   sudo: yes
 
@@ -28,6 +28,16 @@
   shell: drush si --root={{ drupal_docroot }} --uri={{ drupal_uri }} --account-pass={{ drupal_admin_pass }} --y --db-url={{ drupal_db_url }} --db-su={{ drupal_db_su}} --db-su-pw={{ drupal_db_su_pw}} {{ drupal_install_profile }}
   sudo: yes
   sudo_user: "{{ code_user | default('ubuntu') }}"
+
+- name: Set up local settings
+  template: src=local_settings.php.j2 dest={{ drupal_docroot }}/sites/default/local_settings.php
+  sudo: yes
+
+- name: Include local settings
+  lineinfile:
+    dest={{ drupal_docroot }}/sites/default/settings.php
+    line="include './local_settings.php';"
+    state=present
 
 - name: Set files permissions
   file: path={{ drupal_docroot }}/sites/default/files state=directory owner={{ apache_user | default('www-data') }} group={{ apache_user | default('www-data') }} recurse=yes
