@@ -33,6 +33,12 @@
   template: src=local_settings.php.j2 dest={{ drupal_docroot }}/sites/default/local_settings.php
   sudo: yes
 
+- name: Local settings permissions
+  file:
+    path={{ drupal_docroot }}/sites/default/local_settings.php
+    mode=0644
+  sudo: yes
+
 - name: Include local settings
   lineinfile:
     dest={{ drupal_docroot }}/sites/default/settings.php
@@ -41,5 +47,9 @@
   sudo: yes
 
 - name: Set files permissions
-  file: path={{ drupal_docroot }}/sites/default/files state=directory owner={{ apache_user | default('www-data') }} group={{ apache_user | default('www-data') }} recurse=yes
+  file: 
+    path={{ drupal_docroot }}/sites/default/files 
+    state=directory owner={{ apache_user | default('www-data') }} 
+    group={{ apache_user | default('www-data') }}
+    recurse=yes
   sudo: yes
