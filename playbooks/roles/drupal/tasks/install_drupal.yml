@@ -53,3 +53,9 @@
     group={{ apache_user | default('www-data') }}
     recurse=yes
   sudo: yes
+
+- name: Revert features
+  shell: drush fra -y --root={{ drupal_docroot }} --uri={{ drupal_uri }}
+
+- name: Clear cache
+  shell: drush cc all --root={{ drupal_docroot }} --uri={{ drupal_uri }}
