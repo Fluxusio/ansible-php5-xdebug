@@ -36,7 +36,7 @@
 - name: Include local settings
   lineinfile:
     dest={{ drupal_docroot }}/sites/default/settings.php
-    line="include './local_settings.php';"
+    line="include dirname(__FILE__) . '/local_settings.php';"
     state=present
   sudo: yes
 
