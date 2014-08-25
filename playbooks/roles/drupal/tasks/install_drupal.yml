@@ -25,7 +25,7 @@
   sudo: yes
 
 - name: Install Drupal
-  shell: drush si --root={{ drupal_docroot }} --uri={{ drupal_uri }} --account-pass={{ drupal_admin_pass }} --y --db-url={{ drupal_db_url }} --db-su={{ drupal_db_su}} --db-su-pw={{ drupal_db_su_pw}} {{ drupal_install_profile }}
+  shell: drush si --root={{ drupal_docroot }} --uri={{ drupal_uri }} --account-pass={{ drupal_admin_pass }} --y --db-url={{ drupal_db_url }} --db-su={{ drupal_db_su}} --db-su-pw={{ drupal_db_su_pw}} {{ drupal_install_profile }} {{ drupal_install_extras | default('') }}
   sudo: yes
   sudo_user: "{{ code_user | default('ubuntu') }}"
 
@@ -38,6 +38,7 @@
     dest={{ drupal_docroot }}/sites/default/settings.php
     line="include './local_settings.php';"
     state=present
+  sudo: yes
 
 - name: Set files permissions
   file: path={{ drupal_docroot }}/sites/default/files state=directory owner={{ apache_user | default('www-data') }} group={{ apache_user | default('www-data') }} recurse=yes
