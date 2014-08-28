@@ -59,3 +59,7 @@
 
 - name: Clear cache
   shell: drush cc all --root={{ drupal_docroot }} --uri={{ drupal_uri }}
+
+- name: Migrate content
+  shell: drush en migrate tes_migrate_advertising --y --root={{ drupal_docroot }}; drush mi --all --root={{ drupal_docroot }}; drush dis migrate tes_migrate_advertising --y
+
