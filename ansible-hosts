@@ -1,5 +1,16 @@
-[dev]
+[development]
 cms-service01-az1.development.tescloud.com
+
+[development:vars]
+drupal_docroot=/var/www/drupal/docroot
+drupal_uri=localhost
+drupal_admin_pass=admin
+drupal_db_url=mysql://drupal:WrflsEUB5Jsj6ETqfNomNG88z@cms-mysql.development.tescloud.com/drupal
+drupal_db_su=admin
+drupal_db_su_pw=random-password
+drupal_install_profile=tes
+drupal_install_extras='tes_test_data_form.test_user=1'"
+drupal_environment=development
 
 [test-runner]
 jenkins-cms.management.tescloud.com
