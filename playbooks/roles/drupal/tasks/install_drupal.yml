@@ -28,10 +28,12 @@
   shell: drush si --root={{ drupal_docroot }} --uri={{ drupal_uri }} --account-pass={{ drupal_admin_pass }} --y --db-url={{ drupal_db_url }} --db-su={{ drupal_db_su}} --db-su-pw={{ drupal_db_su_pw}} {{ drupal_install_profile }} {{ drupal_install_extras | default('') }}
   sudo: yes
   sudo_user: "{{ code_user | default('ubuntu') }}"
+  when: drupal_install is defined and drupal_install
 
 - name: Set up local settings
   template: src=local_settings.php.j2 dest={{ drupal_docroot }}/sites/default/local_settings.php
   sudo: yes
+  when: drupal_install is defined and drupal_install
 
 - name: Local settings permissions
   file:
@@ -45,6 +47,11 @@
     line="include dirname(__FILE__) . '/local_settings.php';"
     state=present
   sudo: yes
+
+- name: Run rebuild script
+  shell: DRUPAL_ROOT={{ drupal_docroot }} ENVIRONMENT={{ drupal_environment }} /tmp/drupal-latest/scripts/deployment/rebuild.sh
+  sudo: yes
+  when: drupal_update is defined and drupal_update
 
 - name: Set files permissions
   file: 
