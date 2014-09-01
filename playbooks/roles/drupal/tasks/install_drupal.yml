@@ -77,6 +77,7 @@
 
 - name: Revert features
   shell: drush fra -y --root={{ drupal_docroot }} --uri={{ drupal_uri }}
+  when: drupal_install is defined and drupal_install
 
 - name: Clear cache
   shell: drush cc all --root={{ drupal_docroot }} --uri={{ drupal_uri }}
