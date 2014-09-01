@@ -84,4 +84,4 @@
 
 - name: Migrate content
   shell: drush en migrate tes_migrate_advertising --y --root={{ drupal_docroot }} --uri={{ drupal_uri }}; drush mi --all --root={{ drupal_docroot }} --uri={{ drupal_uri }}; drush dis migrate tes_migrate_advertising --y --root={{ drupal_docroot }} --uri={{ drupal_uri }}
-
+  when: drupal_install is defined and drupal_install
