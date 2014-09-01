@@ -59,6 +59,14 @@
     DRUPAL_DB_NAME: "{{ drupal_db_name }}"
     DRUPAL_DB_HOST: "{{ drupal_db_host }}"
 
+- name: Run deploy script
+  shell: /tmp/drupal-latest/scripts/deployment/deploy.sh
+  sudo: yes
+  when: drupal_deploy is defined and drupal_deploy
+  environment:
+    ENVIRONMENT: "{{ drupal_environment }}"
+    DRUPAL_DOCROOT: "{{ drupal_docroot }}"
+
 - name: Set files permissions
   file: 
     path={{ drupal_docroot }}/sites/default/files 
