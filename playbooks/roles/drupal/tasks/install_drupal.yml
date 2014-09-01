@@ -25,7 +25,7 @@
   sudo: yes
 
 - name: Install Drupal
-  shell: drush si --root={{ drupal_docroot }} --uri={{ drupal_uri }} --account-pass={{ drupal_admin_pass }} --y --db-url={{ drupal_db_url }} --db-su={{ drupal_db_su}} --db-su-pw={{ drupal_db_su_pw}} {{ drupal_install_profile }} {{ drupal_install_extras | default('') }}
+  shell: drush si -y --root={{ drupal_docroot }} --uri={{ drupal_uri }} --account-pass={{ drupal_admin_pass }} --db-url=mysql://{{ drupal_db_user }}:{{ drupal_db_pass }}@{{ drupal_db_host }}/{{ drupal_db_name }} --db-su={{ drupal_db_su }} --db-su-pw={{ drupal_db_su_pw }} {{ drupal_install_profile }} {{ drupal_install_extras | default('') }}
   sudo: yes
   sudo_user: "{{ code_user | default('ubuntu') }}"
   when: drupal_install is defined and drupal_install
@@ -51,6 +51,13 @@
   shell: DRUPAL_ROOT={{ drupal_docroot }} ENVIRONMENT={{ drupal_environment }} /tmp/drupal-latest/scripts/deployment/rebuild.sh
   sudo: yes
   when: drupal_update is defined and drupal_update
+  environment:
+    ENVIRONMENT: {{ drupal_environment }}
+    DRUPAL_DOCROOT: {{ drupal_docroot }}
+    DRUPAL_DB_SU: {{ drupal_db_su }}
+    DRUPAL_DB_SU_PW: {{ drupal_db_su_pw }}
+    DRUPAL_DB_NAME: {{ drupal_db_name }}
+    DRUPAL_DB_HOST: {{ drupal_db_host }}
 
 - name: Set files permissions
   file: 
