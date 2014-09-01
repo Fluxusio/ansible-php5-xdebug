@@ -52,12 +52,12 @@
   sudo: yes
   when: drupal_update is defined and drupal_update
   environment:
-    ENVIRONMENT: {{ drupal_environment }}
-    DRUPAL_DOCROOT: {{ drupal_docroot }}
-    DRUPAL_DB_SU: {{ drupal_db_su }}
-    DRUPAL_DB_SU_PW: {{ drupal_db_su_pw }}
-    DRUPAL_DB_NAME: {{ drupal_db_name }}
-    DRUPAL_DB_HOST: {{ drupal_db_host }}
+    ENVIRONMENT: drupal_environment
+    DRUPAL_DOCROOT: drupal_docroot
+    DRUPAL_DB_SU: drupal_db_su
+    DRUPAL_DB_SU_PW: drupal_db_su_pw
+    DRUPAL_DB_NAME: drupal_db_name
+    DRUPAL_DB_HOST: drupal_db_host
 
 - name: Set files permissions
   file: 
