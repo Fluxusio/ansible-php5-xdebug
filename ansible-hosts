@@ -59,3 +59,7 @@ drupal_admin_pass=admin
 
 [test-runner]
 jenkins-cms.management.tescloud.com
+
+
+[vagrant]
+fluxus-local
