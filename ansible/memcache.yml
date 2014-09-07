@@ -1,0 +1,6 @@
+---
+
+- hosts: memcaches
+  
+  roles:
+    - { role: memcached }

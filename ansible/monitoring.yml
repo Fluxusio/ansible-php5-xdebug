@@ -1,0 +1,6 @@
+---
+- hosts: webservers:&live
+
+  roles:
+    - newrelic
+    - newrelic-php
