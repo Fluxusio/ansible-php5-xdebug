@@ -1,0 +1,24 @@
+[submodule "playbooks/roles/test_runner"]
+	path = playbooks/roles/test_runner
+	url = https://github.com/Fluxusio/ansible-test-runner
+[submodule "playbooks/roles/php5"]
+	path = playbooks/roles/php5
+	url = https://github.com/Fluxusio/ansible-php5
+[submodule "playbooks/roles/memcached"]
+	path = playbooks/roles/memcached
+	url = https://github.com/Fluxusio/ansible-memcached
+[submodule "playbooks/roles/mysql"]
+	path = playbooks/roles/mysql
+	url = https://github.com/Fluxusio/ansible-mysql-server
+[submodule "playbooks/roles/apache_modphp"]
+	path = playbooks/roles/apache_modphp
+	url = https://github.com/Fluxusio/ansible-apache
+[submodule "playbooks/roles/composer"]
+	path = playbooks/roles/composer
+	url = https://github.com/Fluxusio/ansible-composer
+[submodule "playbooks/roles/drush"]
+	path = playbooks/roles/drush
+	url = https://github.com/Fluxusio/ansible-drush
+[submodule "playbooks/roles/dev-tools"]
+	path = playbooks/roles/dev-tools
+	url = https://github.com/Fluxusio/ansible-dev-tools
