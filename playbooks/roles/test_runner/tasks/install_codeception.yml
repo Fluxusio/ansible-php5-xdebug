@@ -4,6 +4,10 @@
   file: path=/opt/codeception owner=root group=root state=directory
   sudo: yes
 
+- name: Empty directory if not using git version of codeception yet
+  shell: "bash -c '[ -d /opt/codeception/.git ] || rm -rf /opt/codeception/*'"
+  sudo: yes
+
 - name: Download codeception
   git:
     repo=https://github.com/Codeception/Codeception.git
