@@ -18,6 +18,7 @@
 - name: Install codeception dependencies
   # Update seems to be necessary for some reason
   shell: composer update --prefer-dist --working-dir=/opt/codeception
+  sudo: yes
 
 - name: Create symlink
   file: src=/opt/codeception/codecept dest=/usr/local/bin/codecept state=link
