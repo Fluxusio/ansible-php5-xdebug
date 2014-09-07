@@ -1,8 +1,0 @@
----
-
-- hosts: all
-
-  roles:
-    - apache_modphp
-    - { role: php5, php_type: apache2 }
-
