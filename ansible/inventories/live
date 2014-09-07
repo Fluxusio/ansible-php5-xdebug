@@ -1,8 +1,21 @@
-[live-primary]
+[az1-memcaches]
 cms-service01-az1.live.tescloud.com
 
-[live-secondary]
+[az2-memcaches]
+
+[az1-webservers]
+cms-service01-az1.live.tescloud.com
+
+[az2-webservers]
+
+[memcaches:children]
+az1-memcaches
+az2-memcaches
+
+[webservers:children]
+az1-webservers
+az2-webservers
 
 [live:children]
-live-primary
-live-secondary
+live-az1
+live-az2

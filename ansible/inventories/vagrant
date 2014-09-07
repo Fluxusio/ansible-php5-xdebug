@@ -1,2 +1,9 @@
-[vagrant]
+[webservers]
 192.168.33.11
+
+[memcaches]
+192.168.33.11
+
+[vagrant:children]
+webservers
+memcaches

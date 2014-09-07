@@ -1,2 +1,9 @@
-[staging]
+[webservers]
 cms-service01-az1.staging.tescloud.com
+
+[memcaches]
+cms-service01-az1.staging.tescloud.com
+
+[staging]
+webservers
+memcaches
