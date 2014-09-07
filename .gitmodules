@@ -1,24 +1,24 @@
 [submodule "playbooks/roles/test_runner"]
 	path = playbooks/roles/test_runner
-	url = git@github.com/Fluxusio/ansible-test-runner.git
+	url = git@github.com:Fluxusio/ansible-test-runner.git
 [submodule "playbooks/roles/php5"]
 	path = playbooks/roles/php5
-	url = git@github.com/Fluxusio/ansible-php5.git
+	url = git@github.com:Fluxusio/ansible-php5.git
 [submodule "playbooks/roles/memcached"]
 	path = playbooks/roles/memcached
-	url = git@github.com/Fluxusio/ansible-memcached.git
+	url = git@github.com:Fluxusio/ansible-memcached.git
 [submodule "playbooks/roles/mysql"]
 	path = playbooks/roles/mysql
-	url = git@github.com/Fluxusio/ansible-mysql-server.git
+	url = git@github.com:Fluxusio/ansible-mysql-server.git
 [submodule "playbooks/roles/apache_modphp"]
 	path = playbooks/roles/apache_modphp
-	url = git@github.com/Fluxusio/ansible-apache.git
+	url = git@github.com:Fluxusio/ansible-apache.git
 [submodule "playbooks/roles/composer"]
 	path = playbooks/roles/composer
-	url = git@github.com/Fluxusio/ansible-composer.git
+	url = git@github.com:Fluxusio/ansible-composer.git
 [submodule "playbooks/roles/drush"]
 	path = playbooks/roles/drush
-	url = git@github.com/Fluxusio/ansible-drush.git
+	url = git@github.com:Fluxusio/ansible-drush.git
 [submodule "playbooks/roles/dev-tools"]
 	path = playbooks/roles/dev-tools
-	url = git@github.com/Fluxusio/ansible-dev-tools.git
+	url = git@github.com:Fluxusio/ansible-dev-tools.git
