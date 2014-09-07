@@ -5,9 +5,16 @@
   sudo: yes
 
 - name: Download codeception
-  get_url: url=http://codeception.com/releases/2.0.4/codecept.phar dest=/opt/codeception mode=0755
+  git:
+    repo=https://github.com/Codeception/Codeception.git
+    dest=/opt/codeception
+    version=5b2448d48ce56f744077a83195fc92c73cc7ebeb
   sudo: yes
 
+- name: Install codeception dependencies
+  # Update seems to be necessary for some reason
+  shell: composer update --prefer-dist --working-dir=/opt/codeception
+
 - name: Create symlink
-  file: src=/opt/codeception/codecept.phar dest=/usr/local/bin/codecept state=link
+  file: src=/opt/codeception/codecept dest=/usr/local/bin/codecept state=link
   sudo: yes
