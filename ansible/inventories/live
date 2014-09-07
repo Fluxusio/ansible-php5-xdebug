@@ -1,0 +1,8 @@
+[live-primary]
+cms-service01-az1.live.tescloud.com
+
+[live-secondary]
+
+[live:children]
+live-primary
+live-secondary

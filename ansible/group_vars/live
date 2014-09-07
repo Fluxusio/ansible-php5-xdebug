@@ -1,0 +1,14 @@
+---
+drupal_environment: live
+drupal_docroot: /var/www/drupal/docroot
+drupal_uri: localhost
+
+drupal_db_user: drupal
+drupal_db_pass: PtoCZ80dwbfyLz1Wfbu1QJls7
+drupal_db_host: cms-mysql.live.tescloud.com
+drupal_db_name: drupal
+drupal_db_su: admin
+drupal_db_su_pw: vddCBJv3JF2Xhbc20RMOrvFxf
+
+drupal_install_profile: tes
+drupal_admin_pass: admin

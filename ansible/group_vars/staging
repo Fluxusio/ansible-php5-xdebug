@@ -1,0 +1,16 @@
+---
+drupal_environment: staging
+drupal_docroot: /var/www/drupal/docroot
+drupal_uri: localhost
+
+drupal_db_user: drupal
+drupal_db_pass: pOMuf9HsmSYJG6DKwjGPib5N6
+drupal_db_host: cms-mysql.staging.tescloud.com
+drupal_db_name: drupal
+drupal_db_su: admin
+drupal_db_su_pw: SqHXTmFgB0syexidFfwKdKhwT
+
+drupal_install_profile: tes
+drupal_install_extras: "tes_test_data_form.test_user: 1"
+drupal_admin_pass: admin
+
