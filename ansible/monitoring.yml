@@ -1,6 +1,6 @@
 ---
 - hosts: webservers
-
+  sudo: true
   roles:
     - newrelic
     - newrelic-php
