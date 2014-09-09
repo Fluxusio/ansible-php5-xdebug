@@ -22,9 +22,3 @@
 [submodule "ansible/roles/dev-tools"]
 	path = ansible/roles/dev-tools
 	url = git@github.com:Fluxusio/ansible-dev-tools.git
-[submodule "ansible/roles/newrelic-php"]
-	path = ansible/roles/praseodym.newrelic-php
-	url = https://github.com/praseodym/ansible-newrelic-php
-[submodule "ansible/roles/newrelic"]
-	path = ansible/roles/sivel.newrelic
-	url = https://github.com/sivel/ansible-newrelic
