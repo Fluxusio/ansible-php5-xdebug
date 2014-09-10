@@ -12,3 +12,6 @@ drupal_db_su_pw: vddCBJv3JF2Xhbc20RMOrvFxf
 
 drupal_install_profile: tes
 drupal_admin_pass: admin
+
+newrelic_license_key: ab2fa361cd4d0d373833cad619d7bcc424d27c16
+newrelic_appname: drupal 
