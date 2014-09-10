@@ -1,0 +1,8 @@
+---
+
+- name: Restart New Relic
+  service:
+    name: newrelic-sysmond
+    state: restarted
+  sudo: yes
+  when: newrelic_license_key != ''

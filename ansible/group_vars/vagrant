@@ -1,0 +1,24 @@
+---
+php_extra_packages:
+  - php5-memcached
+  - php5-mysqlnd
+  - php5-mcrypt
+  - php5-gd
+  - php5-json
+  - php5-curl
+  - php5-xdebug
+
+php_ini: &php_ini
+  display_errors: "On"
+
+php_ini_cli:
+  << : *php_ini
+
+php_ini_server:
+  << : *php_ini
+
+php_extension_config:
+  - name: xdebug
+    settings:
+      - key: default_enable
+        value: "Off"

@@ -1,0 +1,24 @@
+[submodule "ansible/roles/test_runner"]
+	path = ansible/roles/test_runner
+	url = git@github.com:Fluxusio/ansible-test-runner.git
+[submodule "ansible/roles/php5"]
+	path = ansible/roles/php5
+	url = git@github.com:Fluxusio/ansible-php5.git
+[submodule "ansible/roles/memcached"]
+	path = ansible/roles/memcached
+	url = git@github.com:Fluxusio/ansible-memcached.git
+[submodule "ansible/roles/mysql"]
+	path = ansible/roles/mysql
+	url = git@github.com:Fluxusio/ansible-mysql-server.git
+[submodule "ansible/roles/apache_modphp"]
+	path = ansible/roles/apache_modphp
+	url = git@github.com:Fluxusio/ansible-apache.git
+[submodule "ansible/roles/composer"]
+	path = ansible/roles/composer
+	url = git@github.com:Fluxusio/ansible-composer.git
+[submodule "ansible/roles/drush"]
+	path = ansible/roles/drush
+	url = git@github.com:Fluxusio/ansible-drush.git
+[submodule "ansible/roles/dev-tools"]
+	path = ansible/roles/dev-tools
+	url = git@github.com:Fluxusio/ansible-dev-tools.git

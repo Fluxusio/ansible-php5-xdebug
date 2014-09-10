@@ -1,7 +1,0 @@
----
-
-- hosts: all
-  
-  roles:
-    - { role: ansible-jenkins }
-    - { role: ansible }

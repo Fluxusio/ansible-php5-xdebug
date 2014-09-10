@@ -1,0 +1,12 @@
+---
+
+- name: Configure New Relic Sysmond
+  template:
+    src: nrsysmond.cfg.j2
+    dest: /etc/newrelic/nrsysmond.cfg
+    group: newrelic
+    owner: root
+    mode: 0640
+  notify:
+    - Restart New Relic
+  sudo: yes

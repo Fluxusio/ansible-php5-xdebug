@@ -1,9 +1,0 @@
----
-
-- name: Set MySQL max allowed packet
-  ini_file: dest=/etc/my.cnf
-            section=mysqld
-            option=max_allowed_packet
-            value={{ mysql_key_buffer_size | default('32M') }}
-  notify:
-  - restart mysql

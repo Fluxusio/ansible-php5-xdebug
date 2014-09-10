@@ -1,0 +1,7 @@
+---
+- hosts: webservers
+  roles:
+    - php5
+    - newrelic
+    - newrelic-php
+

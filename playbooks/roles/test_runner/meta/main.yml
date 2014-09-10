@@ -1,6 +1,0 @@
----
-
-dependencies:
-  - { role: dev-tools }
-  - { role: composer }
-  - { role: node }

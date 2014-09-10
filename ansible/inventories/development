@@ -1,0 +1,9 @@
+[webservers]
+cms-service01-az1.development.tescloud.com
+
+[memcaches]
+cms-service01-az1.development.tescloud.com
+
+[development:children]
+webservers
+memcaches

@@ -1,0 +1,8 @@
+---
+
+- name: Run New Relic Installer
+  shell: NR_INSTALL_SILENT=true newrelic-install install
+  sudo: yes
+  notify:
+  - restart php5-server
+

@@ -1,0 +1,18 @@
+---
+
+- name: Install New Relic PHP Agent
+  apt: name=newrelic-php5 install_recommends=no update_cache=yes cache_valid_time=86400
+  notify:
+    - Run New Relic Installer
+  sudo: yes
+
+- name: Configure New Relic PHP Agent
+  template:
+    src: newrelic.ini.j2
+    dest: "/etc/php5/{{ php_type|default('apache2') }}/conf.d/newrelic.ini"
+    group: root
+    owner: root
+    mode: 0640
+  notify:
+    - Run New Relic Installer
+  sudo: yes
