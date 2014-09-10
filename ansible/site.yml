@@ -2,4 +2,4 @@
 
 - include: webserver.yml
 - include: memcache.yml
-#- include: monitoring.yml
+- include: monitoring.yml

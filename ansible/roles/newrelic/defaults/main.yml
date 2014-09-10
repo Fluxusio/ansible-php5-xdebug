@@ -1,0 +1,5 @@
+---
+
+newrelic_license_key: ''
+newrelic_enabled: "{{ 'true' if (newrelic_license_key != '') else 'false' }}"
+newrelic_appname: ''
