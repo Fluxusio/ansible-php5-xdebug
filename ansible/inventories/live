@@ -17,5 +17,6 @@ az1-webservers
 az2-webservers
 
 [live:children]
-live-az1
-live-az2
+webservers
+memcaches
+
