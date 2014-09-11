@@ -15,3 +15,13 @@ drupal_admin_pass: admin
 
 newrelic_license_key: "e810a2d4ca5378a1c7f748cfe5b6618b3aa98178"
 newrelic_appname: "Drupal"
+
+mpm_prefork_conf:
+  StartServers: 30
+  MinSpareServers: 50
+  MaxSpareServers: 50
+  MaxRequestWorkers: 80
+  MaxConnectionsPerChild: 1000
+
+
+
