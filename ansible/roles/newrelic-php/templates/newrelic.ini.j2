@@ -297,7 +297,7 @@ newrelic.daemon.logfile = "/var/log/newrelic/newrelic-daemon.log"
 ;          When enabled will cause the agent to insert a header and a footer
 ;          in HTML output that will time the actual end-user experience.
 ;
-;newrelic.browser_monitoring.auto_instrument = true
+newrelic.browser_monitoring.auto_instrument = {{ newrelic_browser_monitoring_auto_instrument|default('true') }}
 
 ;
 ; Setting: newrelic.transaction_tracer.enabled
