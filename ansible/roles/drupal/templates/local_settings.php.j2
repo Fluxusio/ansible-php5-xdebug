@@ -6,6 +6,6 @@ $conf['cache_default_class'] = 'MemCacheDrupal';
 
 $conf['memcache_servers'] = array(
 {% for host in groups['memcaches'] %}
-   '{{ host }}' => 'default',
+   '{{ host }}:{{ memcached_port|default('11211') }}' => 'default',
 {% endfor %}
 );
