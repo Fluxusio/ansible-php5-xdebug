@@ -1,0 +1,25 @@
+---
+
+- name: Enable mod_proxy
+  shell: a2enmod proxy creates=/etc/apache2/mods-enabled/proxy.load
+  notify:
+    - restart apache
+  sudo: yes
+
+- name: Enable mod_proxy http module
+  shell: a2enmod proxy_http creates=/etc/apache2/mods-enabled/proxy_http.load
+  notify:
+    - restart apache
+  sudo: yes
+
+- name: Add proxy configuration
+  template: src=ucp-proxy.conf.j2 dest=/etc/apache2/conf-available/ucp-proxy.conf
+  sudo: yes
+
+- name: Enable proxy configuration
+  shell: a2enconf ucp-proxy
+  sudo: yes
+  notify:
+    - reload apache
+
+
