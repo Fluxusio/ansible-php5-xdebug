@@ -3,3 +3,4 @@ ProxyPass http://www.tes.co.uk/UCP.svc
 </Location>
 
 ProxyPassMatch ^(/.*\.aspx)$ http://www.tes.co.uk$1
+ProxyPassMatch ^(/avatar_compressed.*)$ http://www.tes.co.uk$1
