@@ -34,10 +34,13 @@
   template: src=local_settings.php.j2 dest={{ drupal_docroot }}/sites/default/local_settings.php
   sudo: yes
 
-- name: Local settings permissions
+- name: Settings files permissions
   file:
-    path={{ drupal_docroot }}/sites/default/local_settings.php
+    path={{ item }}
     mode=0644
+  with_items:
+    - "{{ drupal_docroot }}/sites/default/local_settings.php"
+    - "{{ drupal_docroot }}/sites/default/settings.php"
   sudo: yes
 
 - name: Include local settings
