@@ -1,3 +1,5 @@
 <Location /UCP.svc>
 ProxyPass http://www.tes.co.uk/UCP.svc
 </Location>
+
+ProxyPassMatch ^(/.*\.aspx)$ http://www.tes.co.uk$1
