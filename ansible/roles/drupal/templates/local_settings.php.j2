@@ -3,6 +3,7 @@
 include_once('./includes/cache.inc');
 include_once('./sites/all/modules/contrib/memcache/memcache.inc');
 $conf['cache_default_class'] = 'MemCacheDrupal';
+$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
 
 $conf['memcache_servers'] = array(
 {% for host in groups['memcaches'] %}
