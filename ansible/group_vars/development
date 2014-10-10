@@ -14,7 +14,7 @@ drupal_install_profile: tes
 drupal_install_extras: "tes_test_data_form.test_user: 1"
 drupal_admin_pass: admin
 
-base_url: "http://cms.development.tes.co.uk/"
+base_url: "'http://cms.development.tes.co.uk/'"
 
 mpm_prefork_conf:
   StartServers: 16
