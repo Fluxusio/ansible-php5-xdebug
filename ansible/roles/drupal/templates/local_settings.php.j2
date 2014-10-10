@@ -10,3 +10,5 @@ $conf['memcache_servers'] = array(
    '{{ host }}:{{ memcached_port|default('11211') }}' => 'default',
 {% endfor %}
 );
+
+$base_url = {{ base_url }}
