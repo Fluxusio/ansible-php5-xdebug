@@ -55,6 +55,7 @@
   sudo: yes
   when: drupal_update is defined and drupal_update
   environment:
+    FORCE_DOWNLOAD: "1"
     ENVIRONMENT: "{{ drupal_environment }}"
     DRUPAL_DOCROOT: "{{ drupal_docroot }}"
     DRUPAL_DB_SU: "{{ drupal_db_su }}"
