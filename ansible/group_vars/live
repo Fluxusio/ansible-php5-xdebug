@@ -13,6 +13,8 @@ drupal_db_su_pw: vddCBJv3JF2Xhbc20RMOrvFxf
 drupal_install_profile: tes
 drupal_admin_pass: admin
 
+base_url: "http://www.tes.co.uk/"
+
 newrelic_license_key: "e810a2d4ca5378a1c7f748cfe5b6618b3aa98178"
 newrelic_appname: "Drupal"
 
