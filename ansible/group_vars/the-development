@@ -4,11 +4,11 @@ drupal_docroot: /var/www/drupal/docroot
 drupal_uri: localhost
 
 drupal_db_user: drupal
-drupal_db_pass: WrflsEUB5Jsj6ETqfNomNG88z
+drupal_db_pass: yu701Q8lcvi5eoAwiBswlkrK1
 drupal_db_host: crvgl70r8g22m8.ccuqf90japmi.eu-west-1.rds.amazonaws.com
 drupal_db_name: drupal
 drupal_db_su: admin
-drupal_db_su_pw: pefcfLaXzjLbKmfxxh6P5ocgj
+drupal_db_su_pw: PkzJDUELNOwNBwkREOk0fVUst
 
 drupal_install_profile: thesis
 drupal_admin_pass: admin
