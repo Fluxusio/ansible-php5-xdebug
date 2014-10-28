@@ -11,7 +11,7 @@ drupal_db_su: admin
 drupal_db_su_pw: PkzJDUELNOwNBwkREOk0fVUst
 
 drupal_install_profile: thesis
-drupal_admin_pass: admin
+drupal_admin_pass: x1LkRopzIR2rtWyZZ9d7G5DgS
 
 mpm_prefork_conf:
   StartServers: 16
