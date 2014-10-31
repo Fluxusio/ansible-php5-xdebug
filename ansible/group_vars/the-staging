@@ -1,0 +1,22 @@
+---
+drupal_environment: staging
+drupal_docroot: /var/www/drupal/docroot
+drupal_uri: localhost
+
+drupal_db_user: drupal
+drupal_db_pass: gaRuIr6DD1SOXiPKcbNTvcjzu
+drupal_db_host: websites-rds.staging.tescloud.com
+drupal_db_name: drupal
+drupal_db_su: admin
+drupal_db_su_pw: SqHXTmFgB0syexidFfwKdKhwT
+
+drupal_install_profile: thesis
+drupal_admin_pass: admin
+
+mpm_prefork_conf:
+  StartServers: 16
+  MinSpareServers: 0
+  MaxSpareServers: 0
+  MaxRequestWorkers: 16
+  MaxConnectionsPerChild: 100
+
