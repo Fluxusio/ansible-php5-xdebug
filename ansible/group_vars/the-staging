@@ -4,11 +4,11 @@ drupal_docroot: /var/www/drupal/docroot
 drupal_uri: localhost
 
 drupal_db_user: drupal
-drupal_db_pass: gaRuIr6DD1SOXiPKcbNTvcjzu
-drupal_db_host: websites-rds.staging.tescloud.com
+drupal_db_pass: z52Mvc0TJj1fqmxIvrVSIolmz
+drupal_db_host: cms-the-mysql.staging.tescloud.com
 drupal_db_name: drupal
 drupal_db_su: admin
-drupal_db_su_pw: SqHXTmFgB0syexidFfwKdKhwT
+drupal_db_su_pw: atE9kyRbTvHflVL5sjXsydohO
 
 drupal_install_profile: thesis
 drupal_admin_pass: admin
