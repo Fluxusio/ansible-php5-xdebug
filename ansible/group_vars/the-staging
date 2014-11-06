@@ -10,7 +10,7 @@ drupal_db_name: drupal
 drupal_db_su: admin
 drupal_db_su_pw: atE9kyRbTvHflVL5sjXsydohO
 
-drupal_install_profile: thesis
+drupal_install_profile: panopoly
 drupal_admin_pass: admin
 
 mpm_prefork_conf:

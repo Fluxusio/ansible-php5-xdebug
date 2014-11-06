@@ -10,7 +10,7 @@ drupal_db_name: drupal
 drupal_db_su: admin
 drupal_db_su_pw: oX74RXfEAcbN8lEO93MQX7hOP
 
-drupal_install_profile: thesis
+drupal_install_profile: panopoly
 drupal_admin_pass: admin
 
 newrelic_license_key: "e810a2d4ca5378a1c7f748cfe5b6618b3aa98178"
