@@ -1,0 +1,24 @@
+---
+drupal_environment: live
+drupal_docroot: /var/www/drupal/docroot
+drupal_uri: localhost
+
+drupal_db_user: drupal
+drupal_db_pass: PtoCZ80dwbfyLz1Wfbu1QJls7
+drupal_db_host: cms-the-mysql.live.tescloud.com
+drupal_db_name: drupal
+drupal_db_su: admin
+drupal_db_su_pw: vddCBJv3JF2Xhbc20RMOrvFxf
+
+drupal_install_profile: thesis
+drupal_admin_pass: admin
+
+newrelic_license_key: "e810a2d4ca5378a1c7f748cfe5b6618b3aa98178"
+newrelic_appname: "Drupal"
+
+mpm_prefork_conf:
+  StartServers: 30
+  MinSpareServers: 50
+  MaxSpareServers: 50
+  MaxRequestWorkers: 80
+  MaxConnectionsPerChild: 1000
