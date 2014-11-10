@@ -11,3 +11,4 @@
     - { role: drush, drush_extensions: [registry_rebuild] }
     - { role: test_runner }
     - { role: role-mailcatcher}
+    - { role: mailcatcher-php}

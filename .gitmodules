@@ -31,3 +31,6 @@
 [submodule "role-mailcatcher"]
 	path = ansible/roles/role-mailcatcher
 	url = https://github.com/yauh/role-mailcatcher
+[submodule "ansible/roles/mailcatcher-php"]
+	path = ansible/roles/mailcatcher-php
+	url = git@github.com:Fluxusio/ansible-mailcatcher-php.git
