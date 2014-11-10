@@ -29,5 +29,5 @@
 	path = ansible/roles/joshualund.ruby-1_9_3
 	url = https://github.com/jlund/ansible-ruby-1.9.3
 [submodule "role-mailcatcher"]
-	path = role-mailcatcher
+	path = ansible/roles/role-mailcatcher
 	url = https://github.com/yauh/role-mailcatcher
