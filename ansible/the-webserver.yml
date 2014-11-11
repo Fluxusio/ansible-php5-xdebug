@@ -12,3 +12,4 @@
   sudo: yes
   roles:
     - { role: role-mailcatcher }
+    - { role: mailcatcher-php }
