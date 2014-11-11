@@ -4,6 +4,9 @@ cms-the-service01-az1.development.tescloud.com
 [memcaches]
 cms-the-service01-az1.development.tescloud.com
 
+[mailcatchers]
+cms-the-service01-az1.development.tescloud.com
+
 [the-development:children]
 webservers
 memcaches

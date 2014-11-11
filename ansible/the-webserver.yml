@@ -7,3 +7,8 @@
         vhosts: [{ vhost: "default", docroot: "/var/www/drupal/docroot",
         create_dir: yes }]}
     - { role: drush, drush_extensions: [registry_rebuild] }
+
+- hosts: mailcatchers
+
+  roles:
+    - { role: role-mailcatcher }
