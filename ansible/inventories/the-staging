@@ -4,6 +4,9 @@ cms-the-service01-az1.staging.tescloud.com
 [memcaches]
 cms-the-service01-az1.staging.tescloud.com
 
+[mailcatchers]
+cms-the-service01-az1.staging.tescloud.com
+
 [the-staging:children]
 webservers
 memcaches
