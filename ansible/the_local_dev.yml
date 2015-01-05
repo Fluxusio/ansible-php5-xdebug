@@ -1,7 +1,10 @@
 ---
 
 - hosts: all
-  
+  vars:
+    drupal_db_user: 'drupal'
+    drupal_db_user_pass: 'drupal'
+    drupal_db_name: 'drupal'
   roles:
     - { role: memcached }
     - { role: mysql }
