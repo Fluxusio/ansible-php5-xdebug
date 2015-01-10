@@ -11,3 +11,5 @@
     - { role: drush, drush_extensions: [registry_rebuild] }
     - { role: test_runner }
     - { role: ucp-proxy }
+    - { role: php-pear, pear_channels: [], pear_packages: [pear/PHP_CodeSniffer-1.4.2]}
+    - { role: drupalcs }
