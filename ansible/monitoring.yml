@@ -5,3 +5,5 @@
     - newrelic
     - newrelic-php
     - named-server
+    - splunk-forwarder
+
