@@ -1,10 +1,7 @@
 ---
 
 - hosts: all
-  vars:
-    drupal_db_user: 'drupal'
-    drupal_db_user_pass: 'drupal'
-    drupal_db_name: 'drupal'
+
   roles:
     - { role: memcached }
     - { role: mysql }
@@ -15,7 +12,5 @@
     - { role: node }
     - { role: test_runner }
     - { role: ucp-proxy }
-    - { role: role-mailcatcher}
-    - { role: mailcatcher-php}
     - { role: php-pear, pear_channels: [], pear_packages: [pear/PHP_CodeSniffer-1.4.2]}
     - { role: drupalcs }
