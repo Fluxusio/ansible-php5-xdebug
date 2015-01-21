@@ -5,6 +5,7 @@
     drupal_db_user: 'drupal'
     drupal_db_user_pass: 'drupal'
     drupal_db_name: 'drupal'
+
   roles:
     - { role: memcached }
     - { role: mysql }
@@ -12,6 +13,7 @@
     - { role: apache_modphp,
         vhosts: [{ vhost: "default", docroot: "/vagrant/docroot" }]}
     - { role: drush, drush_extensions: [registry_rebuild] }
+    - { role: node }
     - { role: test_runner }
     - { role: ucp-proxy }
     - { role: role-mailcatcher }

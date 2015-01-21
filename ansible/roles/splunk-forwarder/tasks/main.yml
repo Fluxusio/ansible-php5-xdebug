@@ -1,0 +1,31 @@
+- name: "[splunk] fetch package"
+  sudo: True
+  get_url: url=https://s3-eu-west-1.amazonaws.com/cloudreach-software/splunkforwarder-6.1.4-233537-linux-2.6-amd64.deb dest=/var/tmp/splunkforwarder.deb
+
+- name: "[splunk] install package"
+  sudo: True
+  apt: deb=/var/tmp/splunkforwarder.deb
+
+- name: "[splunk] copy app"
+  sudo: True
+  copy: src=splunk-app-unix/ dest=/opt/splunkforwarder/etc/apps/unix
+
+- name: "[splunk] move outputs file"
+  sudo: True
+  action: command mv /opt/splunkforwarder/etc/apps/unix/local/outputs.conf /opt/splunkforwarder/etc/system/local
+
+- name: "[splunk] chown to splunk"
+  sudo: True
+  action: command chown -R splunk:splunk /opt/splunkforwarder/etc/apps/unix
+
+- name: "[splunk] chmod bin"
+  sudo: True
+  action: command chmod -R 0755 /opt/splunkforwarder/etc/apps/unix/bin
+
+- name: "[splunk] set to run on boot"
+  sudo: True
+  action: command /opt/splunkforwarder/bin/splunk --accept-license --answer-yes --auto-ports --no-prompt enable boot-start
+
+- name: "[splunk] restart service"
+  sudo: True
+  service: name=splunk state=restarted

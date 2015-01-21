@@ -37,3 +37,6 @@
 [submodule "ansible/roles/php-pear"]
 	path = ansible/roles/php-pear
 	url = git@github.com:Fluxusio/ansible-php-pear.git
+[submodule "ansible/roles/named-server"]
+	path = ansible/roles/named-server
+	url = https://github.com/Fluxusio/ansible-named-server
