@@ -22,9 +22,6 @@
 [submodule "ansible/roles/dev-tools"]
 	path = ansible/roles/dev-tools
 	url = git@github.com:Fluxusio/ansible-dev-tools.git
-[submodule "ansible/roles/joshualund.ruby-common"]
-	path = ansible/roles/joshualund.ruby-common
-	url = https://github.com/jlund/ansible-ruby-common.git
 [submodule "ansible/roles/joshualund.ruby-1_9_3"]
 	path = ansible/roles/joshualund.ruby-1_9_3
 	url = https://github.com/jlund/ansible-ruby-1.9.3
