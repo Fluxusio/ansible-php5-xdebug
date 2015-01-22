@@ -13,7 +13,7 @@
         vhosts: [{ vhost: "default", docroot: "/vagrant/docroot" }]}
     - { role: drush, drush_extensions: [registry_rebuild] }
     - { role: test_runner }
-    - { role: role-mailcatcher}
+    - { role: mailcatcher}
     - { role: mailcatcher-php}
     - { role: php-pear, pear_channels: [], pear_packages: [pear/PHP_CodeSniffer-1.4.2]}
     - { role: drupalcs }
