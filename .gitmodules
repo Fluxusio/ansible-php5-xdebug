@@ -31,3 +31,6 @@
 [submodule "ansible/roles/named-server"]
 	path = ansible/roles/named-server
 	url = https://github.com/Fluxusio/ansible-named-server
+[submodule "ansible/roles/mailcatcher"]
+	path = ansible/roles/mailcatcher
+	url = git@github.com:Fluxusio/role-mailcatcher.git
