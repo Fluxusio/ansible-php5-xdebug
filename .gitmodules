@@ -22,15 +22,6 @@
 [submodule "ansible/roles/dev-tools"]
 	path = ansible/roles/dev-tools
 	url = git@github.com:Fluxusio/ansible-dev-tools.git
-[submodule "ansible/roles/joshualund.ruby-common"]
-	path = ansible/roles/joshualund.ruby-common
-	url = https://github.com/jlund/ansible-ruby-common.git
-[submodule "ansible/roles/joshualund.ruby-1_9_3"]
-	path = ansible/roles/joshualund.ruby-1_9_3
-	url = https://github.com/jlund/ansible-ruby-1.9.3
-[submodule "role-mailcatcher"]
-	path = ansible/roles/role-mailcatcher
-	url = https://github.com/yauh/role-mailcatcher
 [submodule "ansible/roles/mailcatcher-php"]
 	path = ansible/roles/mailcatcher-php
 	url = git@github.com:Fluxusio/ansible-mailcatcher-php.git
@@ -40,3 +31,6 @@
 [submodule "ansible/roles/named-server"]
 	path = ansible/roles/named-server
 	url = https://github.com/Fluxusio/ansible-named-server
+[submodule "ansible/roles/mailcatcher"]
+	path = ansible/roles/mailcatcher
+	url = git@github.com:Fluxusio/role-mailcatcher.git
