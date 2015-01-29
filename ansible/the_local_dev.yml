@@ -6,13 +6,13 @@
     drupal_db_user_pass: 'drupal'
     drupal_db_name: 'drupal'
   roles:
+    - { role: dev-tools }
     - { role: memcached }
     - { role: mysql }
     - { role: php5, php_type: apache2 }
     - { role: apache_modphp,
         vhosts: [{ vhost: "default", docroot: "/vagrant/docroot" }]}
     - { role: drush, drush_extensions: [registry_rebuild] }
-    - { role: test_runner }
     - { role: mailcatcher}
     - { role: mailcatcher-php}
     - { role: php-pear, pear_channels: [], pear_packages: [pear/PHP_CodeSniffer-1.4.2]}
