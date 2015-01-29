@@ -6,6 +6,7 @@
     drupal_db_user_pass: 'drupal'
     drupal_db_name: 'drupal'
   roles:
+    - { role: dev-tools }
     - { role: memcached }
     - { role: mysql }
     - { role: php5, php_type: apache2 }
