@@ -7,6 +7,6 @@ $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
 
 $conf['memcache_servers'] = array(
 {% for host in groups['memcaches'] %}
-   '{{ host }}:{{ memcached_port|default('11211') }}' => 'default',
+   '127.0.0.1:11211' => 'default',
 {% endfor %}
 );
