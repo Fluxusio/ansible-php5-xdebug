@@ -12,7 +12,7 @@ $conf['memcache_servers'] = array(
 );
 
 {% if {{ webvision_db_user is defined }} %}
-$databases['{{webvision_db_name}}'] = array(
+$databases['{{ webvision_db_name }}'] = array(
   'default' => array(
     'database' => 'webvision',
     'username' => '{{ webvision_db_user }}',
