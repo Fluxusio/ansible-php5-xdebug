@@ -9,7 +9,7 @@ $conf['memcache_servers'] = array(
    '127.0.0.1:11211' => 'default',
 );
 
-{% if {{ webvision_db_user is defined }} %}
+{% if webvision_db_user is defined %}
 $databases['{{ webvision_db_name }}'] = array(
   'default' => array(
     'database' => 'webvision',
