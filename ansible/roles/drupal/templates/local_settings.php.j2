@@ -8,3 +8,17 @@ $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
 $conf['memcache_servers'] = array(
    '127.0.0.1:11211' => 'default',
 );
+
+{% if {{ webvision_db_user }} %}
+$databases['{{webvision_db_name}}'] = array(
+  'default' => array(
+    'database' => 'webvision',
+    'username' => '{{ webvision_db_user }}',
+    'password' => '{{ webvision_db_pass }}',
+    'host' => '{{ webvision_db_host }}',
+    'port' => '',
+    'driver' => 'mysql',
+    'prefix' => false,
+  ),
+);
+{% endif %}
