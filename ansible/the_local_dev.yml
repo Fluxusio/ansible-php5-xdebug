@@ -16,5 +16,5 @@
     - { role: test_runner }
     - { role: mailcatcher}
     - { role: mailcatcher-php}
-    - { role: php-pear, pear_channels: [], pear_packages: [pear/PHP_CodeSniffer-1.4.2]}
+    - { role: php-pear, pear_channels: [], pear_packages: [pear/PHP_CodeSniffer-2.2.0]}
     - { role: drupalcs }
