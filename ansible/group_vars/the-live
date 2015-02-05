@@ -10,6 +10,11 @@ drupal_db_name: drupal
 drupal_db_su: admin
 drupal_db_su_pw: oX74RXfEAcbN8lEO93MQX7hOP
 
+webvision_db_user: webvision
+webvision_db_pass: Ki3XocrCOGxf1BGL8ALjX8hdP
+webvision_db_host: cms-the-mysql.live.tescloud.com
+webvision_db_name: webvision
+
 drupal_install_profile: panopoly
 drupal_admin_pass: admin
 
