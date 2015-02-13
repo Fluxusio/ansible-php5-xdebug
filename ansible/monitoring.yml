@@ -6,4 +6,5 @@
     - newrelic-php
     - named-server
     - splunk-forwarder
+    - cloudreach
 

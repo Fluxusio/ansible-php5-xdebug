@@ -1,0 +1,17 @@
+---
+- name: Create Cloudreach group
+  group: name=cloudreach
+
+- name: Create Cloudreach user
+  user: name=cloudreach shell=/bin/bash comment="Cloudreach" group=cloudreach
+  sudo: yes
+
+- name: Set up cloudreach ssh key
+  authorized_key: user=cloudreach key="{{ item }}"
+  with_file:
+    - ../public_keys/cloudreach
+  sudo: yes
+
+- name: Add user to sudoers
+  copy: content='cloudreach ALL=(ALL) NOPASSWD:ALL' dest=/etc/sudoers.d/91-cloudreach-user group=root mode=0644 owner=root validate='visudo -cf %s'
+  sudo: yes
