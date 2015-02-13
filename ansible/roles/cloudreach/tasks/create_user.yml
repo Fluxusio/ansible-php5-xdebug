@@ -1,6 +1,7 @@
 ---
 - name: Create Cloudreach group
   group: name=cloudreach
+  sudo: yes
 
 - name: Create Cloudreach user
   user: name=cloudreach shell=/bin/bash comment="Cloudreach" group=cloudreach
