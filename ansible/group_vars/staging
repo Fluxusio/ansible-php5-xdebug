@@ -1,6 +1,7 @@
 ---
 drupal_environment: staging
 drupal_docroot: /var/www/drupal/docroot
+drupal_private_files: /var/www/drupal/private_files
 drupal_uri: localhost
 
 drupal_db_user: drupal
