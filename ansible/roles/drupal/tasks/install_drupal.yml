@@ -79,6 +79,15 @@
     recurse=yes
   sudo: yes
 
+- name: Ensure private files folder
+  file:
+    path={{ drupal_private_files }}
+    state=directory
+    owner={{ apache_user | default('www-data') }}
+    group={{ code_user | default('ubuntu') }}
+    recurse=yes
+  sudo: yes
+
 - name: Revert features
   shell: drush fra -y --root={{ drupal_docroot }} --uri={{ drupal_uri }}
   when: drupal_install is defined and drupal_install
