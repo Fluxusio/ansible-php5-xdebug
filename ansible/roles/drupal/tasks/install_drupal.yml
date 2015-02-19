@@ -79,7 +79,7 @@
     recurse=yes
   sudo: yes
 
-- name: Ensure private files folder
+- name: Ensure private files folder exists
   file:
     path={{ drupal_private_files }}
     state=directory
