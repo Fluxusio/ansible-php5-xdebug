@@ -12,8 +12,8 @@ drupal_db_su: admin
 drupal_db_su_pw: atE9kyRbTvHflVL5sjXsydohO
 
 webvision_db_user: webvision
-webvision_db_pass: p7fms6afuTzgKBPcttHL8JKdb
-webvision_db_host: crvgl70r8g22m8.ccuqf90japmi.eu-west-1.rds.amazonaws.com
+webvision_db_pass: e2NQwKXSPUukvw8hxQ3m3DVCM
+webvision_db_host: cms-the-mysql.staging.tescloud.com
 webvision_db_name: webvision
 
 drupal_install_profile: panopoly
