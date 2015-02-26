@@ -34,3 +34,6 @@
 [submodule "ansible/roles/mailcatcher"]
 	path = ansible/roles/mailcatcher
 	url = git@github.com:Fluxusio/role-mailcatcher.git
+[submodule "ansible/roles/xhprof"]
+	path = ansible/roles/xhprof
+	url = https://github.com/Fluxusio/ansible-xhprof

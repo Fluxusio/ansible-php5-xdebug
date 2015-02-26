@@ -11,10 +11,11 @@
     - { role: mysql }
     - { role: php5, php_type: apache2 }
     - { role: apache_modphp,
-        vhosts: [{ vhost: "default", docroot: "/vagrant/docroot" }]}
+        vhosts: [{ vhost: "default", docroot: "/vagrant/docroot" }, { vhost: "xhprof", docroot: "/var/www/xhprof" }]}
     - { role: drush, drush_extensions: [registry_rebuild] }
     - { role: test_runner }
     - { role: mailcatcher}
     - { role: mailcatcher-php}
     - { role: php-pear, pear_channels: [], pear_packages: [pear/PHP_CodeSniffer-2.2.0]}
     - { role: drupalcs }
+    - { role: xhprof }
