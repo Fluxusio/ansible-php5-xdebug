@@ -21,3 +21,9 @@
     - { role: mailcatcher-php }
     - { role: php-pear, pear_channels: [], pear_packages: [pear/PHP_CodeSniffer-2.2.0]}
     - { role: drupalcs }
+    - { role: php5-xdebug,
+          php_xdebug_idekey: "XDEBUG",
+          php_xdebug_remote_host: "192.168.33.1",
+          php_xdebug_max_nesting_level: 500,
+          php_xdebug_remote_enable: true
+      }
