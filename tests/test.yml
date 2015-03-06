@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  remote_user: root
+
+  roles:
+    - php5
+    - php5-xdebug
