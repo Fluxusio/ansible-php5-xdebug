@@ -37,3 +37,9 @@
 [submodule "ansible/roles/xhprof"]
 	path = ansible/roles/xhprof
 	url = https://github.com/Fluxusio/ansible-xhprof
+[submodule "ansible/roles/php5-dev"]
+	path = ansible/roles/php5-dev
+	url = git@github.com:Fluxusio/ansible-php5-dev.git
+[submodule "ansible/roles/php5-xdebug"]
+	path = ansible/roles/php5-xdebug
+	url = git@github.com:Fluxusio/ansible-php5-xdebug.git
