@@ -1,0 +1,7 @@
+---
+
+- name: Install php5-dev package needed for compiling xdebug extension
+  apt: name=php5-dev state=present install_recommends=yes update_cache=yes cache_valid_time=3600
+  notify:
+    - restart php5-server
+  sudo: yes

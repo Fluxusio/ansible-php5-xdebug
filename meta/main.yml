@@ -1,7 +1,6 @@
 ---
 dependencies:
   - { role: php5 }
-  - { role: php5-dev }
 
 galaxy_info:
   author: geerlingguy
